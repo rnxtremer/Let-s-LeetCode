@@ -5,12 +5,10 @@ public class Solution {
             throw new IllegalArgumentException("n must be between 0 and 37 (inclusive)");
         }
 
-        // Initialize the first three terms (corrected for T1)
         int t0 = 0;
-        int t1 = 1; // Corrected T1 value
+        int t1 = 1; 
         int t2 = 1;
 
-        // Calculate the remaining terms using the recurrence relation
         for (int i = 3; i <= n; i++) {
             int t3 = t0 + t1 + t2;
             t0 = t1;
@@ -18,6 +16,6 @@ public class Solution {
             t2 = t3;
         }
 
-        return n == 0 ? t0 : (n == 1 ? t1 : t2);  // Handle first two terms directly
+        return n == 0 ? t0 : (n == 1 ? t1 : t2); 
     }
 }
